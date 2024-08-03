@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Quiz SQL Queries</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        pre {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Quiz SQL Queries</h1>
+
+    <pre>
+        <code>
+            CREATE DATABASE simple_quiz_db;
+
+            USE simple_quiz_db;
+
+            CREATE TABLE questions (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                question_text VARCHAR(255),
+                option1 VARCHAR(255),
+                option2 VARCHAR(255),
+                option3 VARCHAR(255),
+                option4 VARCHAR(255),
+                correct_answer VARCHAR(255)
+            );
+
+            INSERT INTO questions (question_text, option1, option2, option3, option4, correct_answer)
+            VALUES
+                ('What is the capital of France?', 'Paris', 'London', 'Berlin', 'Madrid', 'Paris'),
+                -- Add more questions similarly
+                ('Question text', 'Option A', 'Option B', 'Option C', 'Option D', 'Correct Option');
+        </code>
+    </pre>
+
+</body>
+</html>
